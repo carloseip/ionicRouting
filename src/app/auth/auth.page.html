@@ -1,9 +1,19 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>auth</ion-title>
-    </ion-toolbar>
-</ion-header>
-
 <ion-content>
-    Bienvenido a la Felicidad..!!
+    <ion-slides #sliders [options]="slideOpts">
+        <ion-slide>
+            <h1>Registro</h1>
+        </ion-slide>
+        <ion-slide>
+            <h1>Súper App</h1>
+            <ion-button expand="block" fill="outline" (click)="prev(sliders)">Login</ion-button>
+            <ion-button expand="block" fill="outline" (click)="next(sliders)">Registro</ion-button>
+        </ion-slide>
+        <ion-slide>
+            <h1>Login</h1>
+            <p>
+                <ion-label>Bienvenido a la Felicidad..!!</ion-label>
+            </p>
+            <ion-button expand="block" fill="outline" [routerLink]="['/ventas']">Ingresar</ion-button>
+        </ion-slide>
+    </ion-slides>
 </ion-content>

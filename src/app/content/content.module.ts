@@ -11,8 +11,12 @@ const routes: Routes = [
     component: ContentComponent,
     children: [
       {
-        path: 'home',
+        path: '',
         loadChildren: './home/home.module#HomePageModule'
+      },
+      {
+        path: 'tabs',
+        loadChildren: './tabs/tabs.module#TabsPageModule'
       }
     ]
   },

@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthPage implements OnInit {
 
+  slideOpts = {
+    initialSlide: 1
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  prev(sliders) {
+    sliders.slideNext();
+  }
+  next(sliders) {
+    sliders.slidePrev();
+  }
 }
